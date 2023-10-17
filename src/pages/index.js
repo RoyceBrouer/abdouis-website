@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Autour_One, Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
+import styles from "../styles/Homepage/styles.css";
 import photo from "../temporary-resources/images/photo1.jpg";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -33,17 +33,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
-        <div className={styles.description}>
-          <div className="imagebox">
-            <Image
-              src={photo}
-              alt="Profile Picture"
-              className="image"
-              // width={calculatedWidth}
-              // height="500"
-              fill={true}
-            />
-          </div>
+        <div className={`imagebox`}>
+          <Image
+            src={photo}
+            alt="Profile Picture"
+            className={`homeImage`}
+            // width={calculatedWidth}
+            // height="500"
+            // fill={true}
+          />
         </div>
       </main>
     </>
