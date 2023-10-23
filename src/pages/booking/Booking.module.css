@@ -1,0 +1,14 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--creme);
+  /* background: white; */
+}
+
+.disclaimer {
+  width: 70vw;
+  padding: 1rem;
+}
