@@ -1,0 +1,71 @@
+[
+  {
+    "titleEnglish": "Critical Whiteness",
+    "titleGerman": "Kritisches Weißsein",
+    "textEnglish": "To realize the ubiquity of racism as a system that affects society as a whole and positions every single one of us, no matter if Black or white-privileged, it is inevitable to examine and destroy the unmarked and universal concept of whiteness.",
+    "textGerman": "Um die Allgegenwärtigkeit von Rassismus als System zu erfassen, das die Gesellschaft als Ganzes betrifft und jede*n einzelne*n von uns, ob Schwarz oder weiß-privilegiert, ist es unumgänglich, Weißsein als unmarkiertes und universelles Konzept zu untersuchen und sichtbar zu machen.",
+    "images": [
+      {
+        "$oid": "65310c0cfc555ffdf8b3ccee"
+      },
+      {
+        "$oid": "65310c0cfc555ffdf8b3ccf6"
+      }
+    ]
+  },
+  {
+    "titleEnglish": "Racism at your University",
+    "titleGerman": "Rassismus im Hörsaal",
+    "textEnglish": "Institutional Racism in academics is the daily reality. Let’s have a closer look to empower the ones affected and evoke progressive change to realise healthy study environments and adequate change of outdates paradigms.",
+    "textGerman": "Institutioneller Rassismus im akademischen Bereich ist die traurige tägliche Realität. Schauen wir genauer hin, um die Betroffenen zu stärken und einen progressiven Wandel hin zu einem gesünderen Studienumfeld und einem angemessenen Wechsel veralteter Paradigmen zu ermöglichen.",
+    "images": [
+      {
+        "$oid": "65310c0cfc555ffdf8b3cce8"
+      }
+    ]
+  },
+  {
+    "titleEnglish": "Anti-Muslim Racism",
+    "titleGerman": "Anti-muslimischer Rassismus",
+    "textEnglish": "What implementations come with being positioned along the intersection of being a queer muslim in Germany? How can we deconstruct the narratives that are fundamental to modern cultural racism? Why is white feminism not our ally? Let’s dive into the specifics of anti-muslim racism.",
+    "textGerman": "Was bedeutet es, queere*r Muslim*a in Deutschland zu sein? Wie können wir Narrative dekonstruieren, die kulturellem Rassismus zugrunde liegen? Warum ist weißer Feminismus nicht unsere Verbündete? Nehmen wir spezifische Wirkweisen antimuslimischen Rassismus auseinander!",
+    "images": [
+      {
+        "$oid": "65310c0cfc555ffdf8b3ccf7"
+      }
+    ]
+  },
+  {
+    "titleEnglish": "Anti-Black Racism",
+    "titleGerman": "Anti-Schwarzer Rassismus",
+    "textEnglish": "The Term Anti-Black Racism refers to racism against Black people and has its history in colonialism. What are the specifics of anti-Black racism and its intersections? And why does it make sense to differentiate between different forms of racism?",
+    "textGerman": "Der Begriff anti-Schwarzer Rassismus bezieht sich auf Rassismus, der sich spezifisch gegen Schwarze Menschen richtet und seine Geschichte im Kolonialismus hat. Was sind die Besonderheiten des anti-Schwarzen Rassismus und intersektionale Interdependenzen? Und inwiefern ist es sinnvoll, zwischen verschiedenen Formen von Rassismus zu unterscheiden?",
+    "images": [
+      {
+        "$oid": "65310c0cfc555ffdf8b3ccf8"
+      }
+    ]
+  },
+  {
+    "titleEnglish": "Cultural Appropriation",
+    "titleGerman": "Kulturelle Aneignung",
+    "textEnglish": "How does cultural appropriation continue systematic exploitation and why is a matter of resources rather than only a matter of so called ‘political correctness’? What is so problematic about ‘Black Fishing’ and what do we learn from ‘white tears’? Let’s find answers and practical approaches to our questions!",
+    "textGerman": "Warum kann kulturelle Aneignung als Teil einer systematischen Ausbeutung von Ressourcen gesehen werden und nicht nur eine Frage der so genannten 'politischen Korrektheit'? Was ist so problematisch an 'Black Fishing' und was erzählen uns ‘white tears’? Finden wir Antworten und praktische Ansätze in Bezug Fragen rund um das Thema Kulturelle Aneignung!",
+    "images": [
+      {
+        "$oid": "65310c0cfc555ffdf8b3cce7"
+      }
+    ]
+  },
+  {
+    "titleEnglish": "Climate Justice",
+    "titleGerman": "Klimagerechtigkeit",
+    "textEnglish": "The fight for Climate Justice aims to ensure ‘representation, inclusion, and protection of the rights of those most vulnerable to the effects of climate change’ (Unicef). This refers to global and social differences as well as generational differences in the impact of global warming.",
+    "textGerman": "Der Kampf für Klimagerechtigkeit zielt darauf ab, 'die Vertretung, die Einbeziehung und den Schutz der Rechte derjenigen zu gewährleisten, die durch die Auswirkungen des Klimawandels am meisten gefährdet sind' (Unicef). Dies bezieht sich auf globale und soziale Unterschiede, sowie auf intergenerationale Unterschiede in Bezug auf die Betroffenheit von den Auswirkungen der globalen Erwärmung.",
+    "images": [
+      {
+        "$oid": "65310c0cfc555ffdf8b3cce9"
+      }
+    ]
+  }
+]

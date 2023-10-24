@@ -18,7 +18,7 @@ export default async function handler(request, response) {
       to: "royce@riseup.net",
       subject: "request from website",
       html: `
-      <h1>Booking Request Information</h1>
+      <h1>Somebody has sent you an Email via your Website</h1>
       <p><strong>First Name:</strong> ${formData.firstName}</p>
       <p><strong>Last Name:</strong> ${formData.lastName}</p>
       <p><strong>Email:</strong> ${formData.email}</p>

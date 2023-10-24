@@ -20,7 +20,7 @@ export default function Home() {
       } else {
         setCurrentIndex((currentIndex) => currentIndex + 1);
       }
-    }, 3000);
+    }, 4000);
 
     return () => clearInterval(intervalId);
   }, [currentIndex, images]);
@@ -32,7 +32,6 @@ export default function Home() {
   if (!images) {
     return <h4>sorry, image cannot be loaded</h4>;
   }
-  console.log(images);
 
   return (
     <>
