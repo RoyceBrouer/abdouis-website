@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import Button from "@/components/Button";
+import Button from "@/components/Buttons";
 import Image from "next/image";
 import Quote from "@/components/Quote";
 import useSWR from "swr";
@@ -16,7 +16,7 @@ export default function WorkshopPage() {
   }
 
   if (!workshops) {
-    return <h4>sorry, image cannot be loaded</h4>;
+    return <h4>sorry, page cannot be loaded</h4>;
   }
   console.log("workshops", workshops);
 
@@ -41,6 +41,11 @@ export default function WorkshopPage() {
       <main className={`${styles.main} ${styles.frame}`}>
         <div className={`${styles.navbox}`}>
           <Button className={`${styles.navButton__workshopButton}`}>
+            <Link href="../" className="navLink">
+              Home
+            </Link>
+          </Button>
+          <Button className={`${styles.navButton__workshopButton}`}>
             <Link href="/workshops" className="navLink">
               Workshops
             </Link>
@@ -59,7 +64,7 @@ export default function WorkshopPage() {
         <Quote />
         {workshops.map((workshop) => {
           return (
-            <Fragment key={workshop._id}>
+            <Link href={`/workshops/${workshop._id}`} key={workshop._id}>
               {workshop.images.map((image) => {
                 return (
                   <Fragment key={image.id}>
@@ -68,9 +73,6 @@ export default function WorkshopPage() {
                     >
                       <Image
                         src={image.url}
-                        // src={
-                        //   "https://res.cloudinary.com/dkrguoage/image/upload/v1697711589/Workshop%20Bilder/File_24_v9z1nk.webp"
-                        // }
                         alt="Picture"
                         className={`${styles.homeImage}`}
                         fill={true}
@@ -80,46 +82,10 @@ export default function WorkshopPage() {
                 );
               })}
               <h6>{workshop.titleEnglish}</h6>
-              <p>{workshop.textEnglish}</p>
-            </Fragment>
+              {/* <p>{workshop.textEnglish}</p> */}
+            </Link>
           );
         })}
-        <div className={`${styles.imagebox}`}>
-          <Image
-            //src={imageWS2.url}
-            src="https://res.cloudinary.com/dkrguoage/image/upload/v1697711747/Workshop%20Bilder/File_15_lrzamh.jpg"
-            alt="Picture"
-            className={`${styles.homeImage}`}
-            fill={true}
-          />
-        </div>
-        <div className={`${styles.imagebox}`}>
-          <Image
-            //src={imageWS3.url}
-            src="https://res.cloudinary.com/dkrguoage/image/upload/v1697711220/Workshop%20Bilder/File_26_qkfli3.jpg"
-            alt="Picture"
-            className={`${styles.homeImage}`}
-            fill={true}
-          />
-        </div>
-        <div className={`${styles.imagebox}`}>
-          <Image
-            //src={imageWS4.url}
-            src="https://res.cloudinary.com/dkrguoage/image/upload/v1697711871/Workshop%20Bilder/File_23_dofm39.webp"
-            alt="Picture"
-            className={`${styles.homeImage}`}
-            fill={true}
-          />
-        </div>
-        <div className={`${styles.imagebox}`}>
-          <Image
-            //src={imageWS5.url}
-            src="https://res.cloudinary.com/dkrguoage/image/upload/v1697711744/Workshop%20Bilder/File_29_whvhcm.jpg"
-            alt="Picture"
-            className={`${styles.homeImage}`}
-            fill={true}
-          />
-        </div>
       </main>
     </>
   );

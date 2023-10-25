@@ -1,6 +1,5 @@
 import dbConnect from "../../../../db/connect";
 import Workshop from "../../../../db/models/Workshop";
-//import Image from "../../../../db/models/Image";
 
 export default async function handler(request, response) {
   await dbConnect();

@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
-import Button from "@/components/Button";
+import Button from "@/components/Buttons";
 import HomepageHeader from "@/components/HomepageHeader/HomepageHeader";
 import useSWR from "swr";
 import { useState } from "react";

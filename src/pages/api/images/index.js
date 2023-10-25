@@ -1,7 +1,7 @@
 import dbConnect from "../../../../db/connect";
 import Image from "../../../../db/models/Image";
 
-export default async function handler(request, response) {
+export default async function imageHandler(request, response) {
   await dbConnect();
 
   if (request.method === "GET") {
