@@ -3,9 +3,27 @@ import Link from "next/link";
 import Form from "@/components/Form/Form";
 import { useRouter } from "next/router";
 import styles from "./Booking.module.css";
+import useSWR from "swr";
 
-export default function BookingPage() {
+export default function BookingPage({ inEnglish }) {
   const router = useRouter();
+
+  const { data: textsnippets, isLoading } = useSWR("/api/textsnippets/");
+
+  if (isLoading) {
+    return <h1>Loading...</h1>;
+  }
+
+  if (!textsnippets) {
+    return <h1>refresh</h1>;
+  }
+  const textPartBeforeEmailLink = textsnippets.find(
+    (textsnippet) => textsnippet.matter === "bookingSiteBeforeEmail"
+  );
+  const textPartAfterEmailLink = textsnippets.find(
+    (textsnippet) => textsnippet.matter === "bookingSiteAfterEmail"
+  );
+
   async function handleBookingRequest(formData) {
     const response = await fetch("/api/booking/", {
       method: "POST",
@@ -26,10 +44,16 @@ export default function BookingPage() {
         <Link href="./">Back</Link>
       </button>
       <h4 className={`${styles.disclaimer}`}>
-        Questions, Feedback and Booking Requests to:
+        {inEnglish
+          ? `${textPartBeforeEmailLink.english}`
+          : `${textPartBeforeEmailLink.deutsch}`}
       </h4>
       <a>booking-abdoui-ws@riseup.net</a>
-      <h4>or fill in the form below. Thank you for reaching out to me!</h4>
+      <h4>
+        {inEnglish
+          ? `${textPartAfterEmailLink.english}`
+          : `${textPartAfterEmailLink.deutsch}`}
+      </h4>
       <Form onSubmit={handleBookingRequest} />
     </main>
   );

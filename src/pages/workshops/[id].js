@@ -32,7 +32,7 @@ export default function WorkshopDetailsPage() {
           </Button>
           <Button className={`${styles.navButton__workshopButton}`}>
             <Link href="/workshops" className="navLink">
-              Workshops
+              All Workshops
             </Link>
           </Button>
           <Button className={`${styles.navButton__bookingButton}`}>

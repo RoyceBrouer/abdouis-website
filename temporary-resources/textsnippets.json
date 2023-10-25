@@ -1,0 +1,17 @@
+[
+  {
+    "matter": "quote",
+    "english": "we are all free to grow",
+    "deutsch": "wir dürfen uns alle entwickeln"
+  },
+  {
+    "matter": "bookingSiteBeforeEmail",
+    "english": "Questions, Feedback and Booking Requests to:",
+    "deutsch": "Buchungsanfragen und Feedback bitte an:"
+  },
+  {
+    "matter": "bookingSiteAfterEmail",
+    "english": "or fill in the form below. Thank you for reaching out to me!",
+    "deutsch": "oder über das Formular! Danke für Ihre Nachricht!"
+  }
+]

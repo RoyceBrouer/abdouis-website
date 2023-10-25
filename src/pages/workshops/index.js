@@ -8,7 +8,7 @@ import Quote from "@/components/Quote";
 import useSWR from "swr";
 import styles from "./WorshopPage.module.css";
 
-export default function WorkshopPage() {
+export default function WorkshopPage({ inEnglish }) {
   const router = useRouter();
   const { data: workshops, isLoading } = useSWR("../api/workshops/");
   if (isLoading) {
@@ -61,13 +61,13 @@ export default function WorkshopPage() {
             </Link>
           </Button>
         </div>
-        <Quote />
+        <Quote isEnglish={inEnglish} />
         {workshops.map((workshop) => {
           return (
             <Link href={`/workshops/${workshop._id}`} key={workshop._id}>
               {workshop.images.map((image) => {
                 return (
-                  <Fragment key={image.id}>
+                  <Fragment key={image._id}>
                     <div
                       className={`${styles.imagebox} ${styles.overlappingImage1}`}
                     >
@@ -82,7 +82,6 @@ export default function WorkshopPage() {
                 );
               })}
               <h6>{workshop.titleEnglish}</h6>
-              {/* <p>{workshop.textEnglish}</p> */}
             </Link>
           );
         })}

@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import Image from "./Image";
 
 const { Schema } = mongoose;
 
@@ -7,7 +8,7 @@ const workshopSchema = new Schema({
   titleGerman: String,
   textEnglish: String,
   textGerman: String,
-  images: { type: [Schema.Types.ObjectId], ref: "Image" },
+  images: { type: [Schema.Types.ObjectId], ref: Image },
 });
 
 const Workshop =
