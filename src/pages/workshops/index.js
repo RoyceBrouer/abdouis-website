@@ -39,50 +39,46 @@ export default function WorkshopPage({ inEnglish }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${styles.frame}`}>
-        <div className={`${styles.navbox}`}>
-          <Button className={`${styles.navButton__workshopButton}`}>
-            <Link href="../" className="navLink">
-              Home
-            </Link>
-          </Button>
-          <Button className={`${styles.navButton__workshopButton}`}>
-            <Link href="/workshops" className="navLink">
-              Workshops
-            </Link>
-          </Button>
-          <Button className={`${styles.navButton__bookingButton}`}>
-            <Link href="/booking" className="navLink">
-              Booking
-            </Link>
-          </Button>
-          <Button className={`${styles.navButton__mediaButton}`}>
-            <Link href="/media" className="navLink">
-              Media
-            </Link>
-          </Button>
-        </div>
-        <Quote isEnglish={inEnglish} />
+        <Link className={`${styles.stickyLink_Home}`} href="/">
+          <button className={`${styles.navButton} ${styles.homeButton}`}>
+            Home
+          </button>
+        </Link>
+        <Link className={`${styles.stickyLink_Booking}`} href="/booking">
+          <button className={`${styles.navButton} ${styles.bookingButton}`}>
+            Booking
+          </button>
+        </Link>
+        <Link className={`${styles.stickyLink_Media}`} href="/media">
+          <button className={`${styles.navButton} ${styles.mediaButton}`}>
+            Media
+          </button>
+        </Link>
         {workshops.map((workshop) => {
           return (
-            <Link href={`/workshops/${workshop._id}`} key={workshop._id}>
-              {workshop.images.map((image) => {
-                return (
-                  <Fragment key={image._id}>
-                    <div
-                      className={`${styles.imagebox} ${styles.overlappingImage1}`}
-                    >
-                      <Image
-                        src={image.url}
-                        alt="Picture"
-                        className={`${styles.homeImage}`}
-                        fill={true}
-                      />
-                    </div>
-                  </Fragment>
-                );
-              })}
-              <h6>{workshop.titleEnglish}</h6>
-            </Link>
+            <div key={workshop._id} className={`${styles.workshopContainer}`}>
+              <Link href={`/workshops/${workshop._id}`}>
+                {workshop.images.map((image) => {
+                  return (
+                    <Fragment key={image._id}>
+                      <div className={`${styles.imagebox}`}>
+                        <Image
+                          src={image.url}
+                          alt="Picture"
+                          className={`${styles.homeImage}`}
+                          fill={true}
+                        />
+                      </div>
+                    </Fragment>
+                  );
+                })}
+                {/* <div className={`${styles.workshoptitleContainer}`}> */}
+                <h6 className={`${styles.workshoptitle}`}>
+                  {inEnglish ? workshop.titleEnglish : workshop.titleGerman}
+                </h6>
+                {/* </div> */}
+              </Link>
+            </div>
           );
         })}
       </main>

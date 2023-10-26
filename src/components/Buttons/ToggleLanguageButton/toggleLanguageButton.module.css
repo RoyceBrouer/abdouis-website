@@ -6,4 +6,8 @@
   padding: 15px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 900;
+  position: absolute;
+  top: 1vh;
+  right: 1vw;
+  color: pink;
 }

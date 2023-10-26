@@ -1,74 +1,127 @@
 .main {
-  /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
-  display: grid;
-  place-content: center;
+  /* padding-top: 20vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-around;
   min-height: 100vh;
-  background: var(--creme);
+  min-width: 100vw;
+  background: linear-gradient(270deg, var(--lightgold), var(--darkgold), pink);
+  /* position: relative; */
 }
 
-/* .navbox {
-    position: relative;
-  } */
-
-/*why is this not working?*/
-.navButton__workshopButton {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  border: 4px solid red;
+.stickyLink_Home {
+  position: sticky;
+  top: 3vh;
   z-index: 2;
 }
 
-.navButton__bookingButton {
-  position: absolute;
+.stickyLink_Booking {
+  position: sticky;
+  top: 3vh;
+  z-index: 2;
 }
 
-.navButton__mediaButton {
+.stickyLink_Media {
+  position: sticky;
+  top: 3vh;
+  z-index: 2;
+}
+
+.workshopContainer {
+  align-self: center;
+  margin-bottom: 5%;
+  margin-top: 15%;
+  position: relative;
+}
+
+.workshoptitle {
+  color: rgba(248, 244, 239, 0.905);
+  border-radius: 50%;
+  /* background: rgba(255, 255, 255, 0.5); */
+  border: none;
+  display: inline;
+  padding: 2rem;
+  font-size: 1.5rem;
   position: absolute;
+  bottom: -3vh;
+  right: 50%;
+}
+
+/* .workshoptitleContainer {
+  border-radius: 20%;
+  background: rgba(255, 255, 255, 0.5);
+  display: inline;
+} */
+
+.navButton {
+  height: 22vh;
+  width: 22vh;
+  border-radius: 50%;
+  border: none;
+  background: radial-gradient(
+    circle at 75% 30%,
+    rgba(255, 255, 255, 0.8) 5%,
+    rgba(0, 255, 255, 0.5) 10%,
+    rgba(64, 1, 173, 0.1) 60%,
+    rgba(0, 255, 255, 0.1) 100%
+  );
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.2),
+    inset 10px 0 46px rgba(234, 245, 252, 0.2),
+    inset 88px 0px 60px rgba(194, 216, 254, 0.2),
+    inset -20px -60px 100px rgba(253, 233, 234, 0.2), inset 0 50px 140px #fde9ea,
+    0 0 90px #fff;
+  backdrop-filter: hue(5vh);
+  font-size: 1.5rem;
+  color: var(--beige);
+  padding: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+  z-index: 1;
+  animation: moveBubble 3.5s ease-in-out infinite;
+  /* animation: wobbleColor 2s ease-in-out infinite; */
+}
+
+@keyframes moveBubble {
+  0% {
+    transform: translatey(0vh);
+  }
+  50% {
+    transform: translatey(-1vh);
+  }
+  100% {
+    transform: translatey(0vh);
+  }
+}
+
+.homeButton {
+  position: absolute;
+  right: 50%;
+  margin-right: -11vh;
+}
+
+.bookingButton {
+  position: absolute;
+  top: 3vh;
+  left: 3vw;
+  animation-delay: 500ms;
+}
+
+.mediaButton {
+  position: absolute;
+  right: 3vw;
+  top: 3vh;
+  animation-delay: 800ms;
 }
 
 .imagebox {
-  /* max-width: 70%;
-    min-width: 50%;
-    max-height: 100vh;
-    min-height: 50vh; */
   height: 50vh;
   width: 70vw;
   position: relative;
-  --s: 10px; /* control the size */
-  padding: var(--s);
-  border: calc(2 * var(--s)) solid #0000;
-  outline: 1px solid #000;
-  outline-offset: calc(-1 * var(--s));
-  background: conic-gradient(from 90deg at 1px 1px, #0000 25%, #000 0);
 }
-
-/* .overlapImagebox {
-  position: absolute;
-}
-
-.overlappingImage1 {
-  position: relative;
-}
-
-.overlappingImage2 {
-  position: relative;
-  z-index: 1;
-} 
-*/
 
 .homeImage {
   object-fit: contain;
-  /* max-height: 100%;
-    width: 100%; */
-  /* height: 100%; */
-  /* position: absolute;
-    align-self: center; */
-  /* border: 2px solid white; */
-
   padding: 1rem;
   /* animation: fadeOut 4s infinite; */
 }
@@ -84,112 +137,3 @@
     opacity: 1;
   }
 }
-
-/* @media (prefers-reduced-motion) {
-    .card:hover span {
-      transform: none;
-    }
-  }
-  
-  /* Mobile */
-/* @media (max-width: 700px) {
-    .content {
-      padding: 4rem;
-    }
-  
-    .grid {
-      grid-template-columns: 1fr;
-      margin-bottom: 120px;
-      max-width: 320px;
-      text-align: center;
-    }
-  
-    .card {
-      padding: 1rem 2.5rem;
-    }
-  
-    .card h2 {
-      margin-bottom: 0.5rem;
-    }
-  
-    .center {
-      padding: 8rem 0 6rem;
-    }
-  
-    .center::before {
-      transform: none;
-      height: 300px;
-    }
-  
-    .description {
-      font-size: 0.8rem;
-    }
-  
-    .description a {
-      padding: 1rem;
-    }
-  
-    .description p,
-    .description div {
-      display: flex;
-      justify-content: center;
-      position: fixed;
-      width: 100%;
-    }
-  
-    .description p {
-      align-items: center;
-      inset: 0 0 auto;
-      padding: 2rem 1rem 1.4rem;
-      border-radius: 0;
-      border: none;
-      border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
-      background: linear-gradient(
-        to bottom,
-        rgba(var(--background-start-rgb), 1),
-        rgba(var(--callout-rgb), 0.5)
-      );
-      background-clip: padding-box;
-      backdrop-filter: blur(24px);
-    }
-  
-    .description div {
-      align-items: flex-end;
-      pointer-events: none;
-      inset: auto 0 0;
-      padding: 2rem;
-      height: 200px;
-      background: linear-gradient(
-        to bottom,
-        transparent 0%,
-        rgb(var(--background-end-rgb)) 40%
-      );
-      z-index: 1;
-    }
-  }
-  
-  /* Tablet and Smaller Desktop */
-/* @media (min-width: 701px) and (max-width: 1120px) {
-    .grid {
-      grid-template-columns: repeat(2, 50%);
-    }
-  }
-  
-  @media (prefers-color-scheme: dark) {
-    .vercelLogo {
-      filter: invert(1);
-    }
-  
-    .logo {
-      filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
-    }
-  }
-  
-  @keyframes rotate {
-    from {
-      transform: rotate(360deg);
-    }
-    to {
-      transform: rotate(0deg);
-    }
-  } */

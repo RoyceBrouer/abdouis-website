@@ -1,18 +1,18 @@
 .main {
-  /* display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; */
-  display: grid;
-  place-content: center;
+  align-items: center;
+  /* display: grid;
+  place-content: center; */
   min-height: 100vh;
-  background: var(--creme);
-  grid-template-areas:
+  background: linear-gradient(45deg, var(--lightgold), var(--darkgold));
+  /* grid-template-areas:
     "header header header"
     "nav1 nav1 nav1"
     "nav2 image nav3"
     "quote quote quote"
-    "footer footer footer";
+    "footer footer footer"; */
 }
 
 /* .navbox {
@@ -20,33 +20,117 @@
 } */
 
 .navButton {
-  border-radius: 25px;
+  /* border-radius: 25px;
   background: none;
   border: 2px solid white;
-  color: white;
-  font-size: 1rem;
+  color: white; */
+  /* animation: float 3.5s ease-in-out infinite; */
+  height: 22vh;
+  width: 22vh;
+  border-radius: 50%;
+  /* position: relative; */
+  border: none;
+  background: radial-gradient(
+    circle at 75% 30%,
+    rgba(255, 255, 255, 0.8) 5%,
+    rgba(0, 255, 255, 0.5) 10%,
+    rgba(64, 1, 173, 0.1) 60%,
+    rgba(0, 255, 255, 0.1) 100%
+  );
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.2),
+    inset 10px 0 46px rgba(234, 245, 252, 0.2),
+    inset 88px 0px 60px rgba(194, 216, 254, 0.2),
+    inset -20px -60px 100px rgba(253, 233, 234, 0.2), inset 0 50px 140px #fde9ea,
+    0 0 90px #fff;
+  backdrop-filter: hue(5vh);
+  font-size: 1.5rem;
+  color: var(--beige);
   padding: 15px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 900;
+  z-index: 1;
+  /* animation: wobbleColor 2s ease-in-out infinite; */
+}
+
+@keyframes moveBubble {
+  0% {
+    transform: translatey(0vh);
+  }
+  50% {
+    transform: translatey(-1vh);
+  }
+  100% {
+    transform: translatey(0vh);
+  }
+}
+
+@keyframes wobbleColor {
+  0% {
+    background: radial-gradient(
+      circle at 75% 30%,
+      rgba(255, 255, 255, 0.8) 5%,
+      rgba(0, 255, 255, 0.5) 8%,
+      rgba(64, 1, 173, 0.2) 60%,
+      rgba(0, 255, 255, 0.2) 100%
+    );
+  }
+  25% {
+    background: radial-gradient(
+      circle at 75% 30%,
+      rgba(255, 255, 255, 0.8) 5%,
+      rgba(127, 255, 255, 0.5) 8%,
+      rgba(100, 50, 213, 0.2) 60%,
+      rgba(0, 255, 255, 0.2) 100%
+    );
+  }
+  75% {
+    background: radial-gradient(
+      circle at 75% 30%,
+      rgba(255, 255, 255, 0.8) 5%,
+      rgba(127, 255, 255, 0.5) 8%,
+      rgba(100, 50, 213, 0.2) 60%,
+      rgba(0, 255, 255, 0.2) 100%
+    );
+  }
+  100% {
+    background: radial-gradient(
+      circle at 75% 30%,
+      rgba(255, 255, 255, 0.8) 5%,
+      rgba(0, 255, 255, 0.5) 8%,
+      rgba(64, 1, 173, 0.2) 60%,
+      rgba(0, 255, 255, 0.2) 100%
+    );
+  }
 }
 
 .workshopButton {
-  /* position: absolute; */
-  /* top: 0px;
-  right: 0px; */
-  grid-area: nav2;
-  border: 4px solid red;
-  z-index: 2;
+  position: absolute;
+  bottom: 3vh;
+  right: 50%;
+  margin-right: -11vh;
+  animation: moveBubble 3.5s ease-in-out infinite,
+    wobbleColor 2s ease-in-out infinite;
+  /* grid-area: nav2; */
 }
 
 .bookingButton {
-  /* position: absolute; */
-  grid-area: nav1;
+  position: absolute;
+  left: 1vw;
+  top: 50%;
+  margin-top: -11vh;
+  animation: moveBubble 3.5s ease-in-out infinite;
+  animation-delay: 500ms;
+  /* grid-area: nav1; */
 }
 
 .mediaButton {
-  /* position: absolute; */
-  grid-area: nav3;
+  position: absolute;
+  right: 1vw;
+  top: 50%;
+  margin-top: -11vh;
+  animation: moveBubble 3.5s ease-in-out infinite;
+  animation-delay: 800ms;
+  /* grid-area: nav3; */
 }
 
 .imagebox {
@@ -54,7 +138,7 @@
   min-width: 50%;
   max-height: 100vh;
   min-height: 50vh; */
-  grid-area: image;
+  /* grid-area: image; */
   height: 50vh;
   width: 70vw;
   position: relative;

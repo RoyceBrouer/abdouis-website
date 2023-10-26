@@ -1,16 +1,25 @@
 :root {
   --beige: rgb(202, 161, 58);
   --creme: rgb(253, 226, 175);
+  --lightgold: rgb(205, 178, 127);
   --orange: rgb(255, 140, 0);
+  --darkgold: rgb(156, 130, 82);
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
 }
 
 a {
   text-decoration: none;
-  color: var(--orange);
+  /* color: var(--orange); */
+  color: var(--beige);
+}
+
+button:hover {
+  cursor: pointer;
 }

@@ -8,7 +8,7 @@ export default function ToggleLanguageButton({ inEnglish, onToggleLanguage }) {
       type="button"
       onClick={() => onToggleLanguage(inEnglish)}
     >
-      {inEnglish ? "Deutsch" : "English"}
+      {inEnglish ? "Website auf Deutsch" : "Website in English"}
     </button>
   );
 }

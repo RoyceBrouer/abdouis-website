@@ -1,5 +1,6 @@
 import React from "react";
 import useSWR from "swr";
+import styles from "./Quote.module.css";
 
 export default function Quote({ isEnglish }) {
   const { data: textsnippets, isLoading } = useSWR("/api/textsnippets/");
@@ -16,5 +17,9 @@ export default function Quote({ isEnglish }) {
   );
   const { english, deutsch } = quote;
 
-  return <h3>{isEnglish ? `"${english}"` : `"${deutsch}"`}</h3>;
+  return (
+    <h3 className={`${styles.quoteText}`}>
+      {isEnglish ? `"${english}"` : `"${deutsch}"`}
+    </h3>
+  );
 }

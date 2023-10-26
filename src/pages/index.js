@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import Button from "@/components/Buttons";
-import HomepageHeader from "@/components/HomepageHeader/HomepageHeader";
+import HomepageHeader from "@/components/HomepageHeader/";
 import useSWR from "swr";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -49,21 +49,21 @@ export default function Home({ inEnglish, handleToggleLanguage }) {
         />
         <HomepageHeader />
         {/* <div className={`${styles.navbox}`}> */}
-        <button className={`${styles.navButton} ${styles.workshopButton}`}>
-          <Link href="/workshops" className="navLink">
+        <Link href="/workshops" className="navLink">
+          <button className={`${styles.navButton} ${styles.workshopButton}`}>
             Workshops
-          </Link>
-        </button>
-        <button className={`${styles.navButton} ${styles.bookingButton}`}>
-          <Link href="/booking" className="navLink">
+          </button>
+        </Link>
+        <Link href="/booking" className="navLink">
+          <button className={`${styles.navButton} ${styles.bookingButton}`}>
             Booking
-          </Link>
-        </button>
-        <button className={`${styles.navButton} ${styles.mediaButton}`}>
-          <Link href="/media" className="navLink">
+          </button>
+        </Link>
+        <Link href="/media" className="navLink">
+          <button className={`${styles.navButton} ${styles.mediaButton}`}>
             Media
-          </Link>
-        </button>
+          </button>
+        </Link>
 
         <div className={`${styles.imagebox}`}>
           <Image
