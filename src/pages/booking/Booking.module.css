@@ -6,15 +6,27 @@
   min-height: 100vh;
   min-width: 100vw;
   background: linear-gradient(270deg, var(--lightgold), var(--darkgold), pink);
+  position: relative;
+  padding-bottom: 3vh;
+}
+
+.disclaimerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 10vh;
 }
 
 .disclaimer {
   width: 70vw;
-  padding: 1rem;
+  /* padding: 1rem; */
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: white;
 }
 
 .emailAdress {
-  color: white;
+  color: black;
 }
 
 .backButton {
@@ -23,12 +35,7 @@
   padding: 0.3rem;
   font-size: 1rem;
   color: white;
-}
-
-.submitButton {
-  background: none;
-  border: 0.2rem solid white;
-  padding: 0.3rem;
-  font-size: 1rem;
-  color: white;
+  position: absolute;
+  top: 1rem;
+  left: 15%;
 }

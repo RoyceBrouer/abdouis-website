@@ -45,17 +45,19 @@ export default function BookingPage({ inEnglish }) {
           {inEnglish ? "Back to Homepage" : "Zurück zur Startseite"}
         </button>
       </Link>
-      <h4 className={`${styles.disclaimer}`}>
-        {inEnglish
-          ? `${textPartBeforeEmailLink.english}`
-          : `${textPartBeforeEmailLink.deutsch}`}
-      </h4>
-      <a className={`${styles.emailAdress}`}>booking-abdoui-ws@riseup.net</a>
-      <h4>
-        {inEnglish
-          ? `${textPartAfterEmailLink.english}`
-          : `${textPartAfterEmailLink.deutsch}`}
-      </h4>
+      <div className={`${styles.disclaimerContainer}`}>
+        <h4 className={`${styles.disclaimer}`}>
+          {inEnglish
+            ? `${textPartBeforeEmailLink.english}`
+            : `${textPartBeforeEmailLink.deutsch}`}
+        </h4>
+        <a className={`${styles.emailAdress}`}>booking-abdoui-ws@riseup.net</a>
+        <h4 className={`${styles.disclaimer}`}>
+          {inEnglish
+            ? `${textPartAfterEmailLink.english}`
+            : `${textPartAfterEmailLink.deutsch}`}
+        </h4>
+      </div>
       <Form inEnglish={inEnglish} onSubmit={handleBookingRequest} />
     </main>
   );

@@ -62,7 +62,9 @@ export default function Form({ onSubmit, inEnglish }) {
               required
             />
           </fieldset>
-          <button>{inEnglish ? "Submit" : "Versenden"}</button>
+          <button className={`${styles.submitButton}`}>
+            {inEnglish ? "Submit" : "Versenden"}
+          </button>
         </div>
       </form>
     </div>
