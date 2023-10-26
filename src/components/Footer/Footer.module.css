@@ -1,0 +1,16 @@
+.footer {
+  width: 100vw;
+  height: 8vh;
+  background: black;
+  color: white;
+  font-size: 0.8rem;
+  /* position: fixed; */
+  bottom: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link {
+  color: rgb(188, 181, 181);
+}

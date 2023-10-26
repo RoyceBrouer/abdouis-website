@@ -10,4 +10,5 @@
   top: 1vh;
   right: 1vw;
   color: pink;
+  z-index: 1;
 }

@@ -2,10 +2,12 @@ import React from "react";
 import Link from "next/link";
 import styles from "./Footer.module.css";
 
-export default function index() {
+export default function Footer() {
   return (
     <nav className={`${styles.footer}`}>
-      <Link href="/impressum">Impressum</Link>
+      <Link className={`${styles.link}`} href="/impressum">
+        Impressum
+      </Link>
     </nav>
   );
 }

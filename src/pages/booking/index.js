@@ -4,6 +4,7 @@ import Form from "@/components/Form/Form";
 import { useRouter } from "next/router";
 import styles from "./Booking.module.css";
 import useSWR from "swr";
+import BackButton from "@/components/Buttons/BackButton";
 
 export default function BookingPage({ inEnglish }) {
   const router = useRouter();
@@ -40,11 +41,7 @@ export default function BookingPage({ inEnglish }) {
   }
   return (
     <main className={`${styles.main}`}>
-      <Link href="./">
-        <button className={`${styles.backButton}`}>
-          {inEnglish ? "Back to Homepage" : "Zurück zur Startseite"}
-        </button>
-      </Link>
+      <BackButton inEnglish={inEnglish} />
       <div className={`${styles.disclaimerContainer}`}>
         <h4 className={`${styles.disclaimer}`}>
           {inEnglish

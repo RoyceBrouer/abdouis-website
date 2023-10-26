@@ -56,7 +56,9 @@
 
 .navButton {
   height: 22vh;
+  min-height: 180px;
   width: 22vh;
+  min-width: 180px;
   border-radius: 50%;
   border: none;
   background: radial-gradient(
