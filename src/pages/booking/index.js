@@ -41,7 +41,9 @@ export default function BookingPage({ inEnglish }) {
   return (
     <main className={`${styles.main}`}>
       <button>
-        <Link href="./">Back</Link>
+        <Link href="./">
+          {inEnglish ? "Back to Homepage" : "Zurück zur Startseite"}
+        </Link>
       </button>
       <h4 className={`${styles.disclaimer}`}>
         {inEnglish
@@ -54,7 +56,7 @@ export default function BookingPage({ inEnglish }) {
           ? `${textPartAfterEmailLink.english}`
           : `${textPartAfterEmailLink.deutsch}`}
       </h4>
-      <Form onSubmit={handleBookingRequest} />
+      <Form inEnglish={inEnglish} onSubmit={handleBookingRequest} />
     </main>
   );
 }

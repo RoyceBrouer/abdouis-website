@@ -51,7 +51,7 @@ export default function WorkshopPage({ inEnglish }) {
         </Link>
         <Link className={`${styles.stickyLink_Media}`} href="/media">
           <button className={`${styles.navButton} ${styles.mediaButton}`}>
-            Media
+            {inEnglish ? "Media" : "Medien"}
           </button>
         </Link>
         {workshops.map((workshop) => {

@@ -5,29 +5,21 @@
 }
 
 .gradientWrapper {
-  padding: 2vw;
-  background: linear-gradient(
-    42deg,
-    white,
-    rgb(246, 213, 213),
-    pink,
-    var(--orange),
-    black
-  );
-  border-radius: 15px;
+  padding: 0.5vw;
+  background: none;
+  border: 0.5rem solid white;
   margin-top: 2vh;
+  box-shadow: 5px 5px 5px rgb(158, 145, 145);
   /* box-shadow: 10px 5px 5px black; */
 }
 
 .infoFieldset {
   display: flex;
   flex-direction: column;
-  border-radius: 10px;
-  background: var(--creme);
+  background: none;
   padding: 1rem;
   margin-bottom: 1rem;
   border-style: none;
-  box-shadow: 5px 5px 5px black;
 }
 
 .messageFieldset {

@@ -23,3 +23,20 @@ a {
 button:hover {
   cursor: pointer;
 }
+
+input {
+  /* background: rgb(247, 199, 199); */
+  background: none;
+  border: 0.25rem solid white;
+  box-shadow: 0.3vh 0.3vh 0.3vh rgb(158, 145, 145);
+  /* box-shadow: 0.3vh 0.3vh 0.3vh black; */
+  padding: 0.25rem;
+  font-size: 1.5vh;
+}
+
+textarea {
+  background: none;
+  border: 0.25rem solid white;
+  box-shadow: 0.3vh 0.3vh 0.3vh rgb(158, 145, 145);
+  font-size: 1.5vh;
+}

@@ -61,7 +61,7 @@ export default function Home({ inEnglish, handleToggleLanguage }) {
         </Link>
         <Link href="/media" className="navLink">
           <button className={`${styles.navButton} ${styles.mediaButton}`}>
-            Media
+            {inEnglish ? "Media" : "Medien"}
           </button>
         </Link>
 
