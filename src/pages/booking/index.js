@@ -40,17 +40,17 @@ export default function BookingPage({ inEnglish }) {
   }
   return (
     <main className={`${styles.main}`}>
-      <button>
-        <Link href="./">
+      <Link href="./">
+        <button className={`${styles.backButton}`}>
           {inEnglish ? "Back to Homepage" : "Zurück zur Startseite"}
-        </Link>
-      </button>
+        </button>
+      </Link>
       <h4 className={`${styles.disclaimer}`}>
         {inEnglish
           ? `${textPartBeforeEmailLink.english}`
           : `${textPartBeforeEmailLink.deutsch}`}
       </h4>
-      <a>booking-abdoui-ws@riseup.net</a>
+      <a className={`${styles.emailAdress}`}>booking-abdoui-ws@riseup.net</a>
       <h4>
         {inEnglish
           ? `${textPartAfterEmailLink.english}`

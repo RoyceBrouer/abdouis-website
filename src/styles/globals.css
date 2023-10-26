@@ -40,3 +40,7 @@ textarea {
   box-shadow: 0.3vh 0.3vh 0.3vh rgb(158, 145, 145);
   font-size: 1.5vh;
 }
+
+::placeholder {
+  color: white;
+}

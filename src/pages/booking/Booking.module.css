@@ -12,3 +12,23 @@
   width: 70vw;
   padding: 1rem;
 }
+
+.emailAdress {
+  color: white;
+}
+
+.backButton {
+  background: none;
+  border: 0.2rem solid white;
+  padding: 0.3rem;
+  font-size: 1rem;
+  color: white;
+}
+
+.submitButton {
+  background: none;
+  border: 0.2rem solid white;
+  padding: 0.3rem;
+  font-size: 1rem;
+  color: white;
+}

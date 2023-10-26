@@ -1,4 +1,4 @@
-import dbConnect from "../../../../db/connect";
+import dbConnect from "../../../../../db/connect";
 import Image from "../../../../../db/models/Image";
 
 export default async function handler(request, response) {
