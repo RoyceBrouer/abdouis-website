@@ -15,4 +15,4 @@ let configOptions = {
   },
 };
 
-module.exports = { eslint: { ignoreDuringBuilds: true } };
+module.exports = nextConfig;
