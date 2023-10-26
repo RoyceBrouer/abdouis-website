@@ -41,7 +41,7 @@ export default function WorkshopPage({ inEnglish }) {
       <main className={`${styles.main} ${styles.frame}`}>
         <Link className={`${styles.stickyLink_Home}`} href="/">
           <button className={`${styles.navButton} ${styles.homeButton}`}>
-            Home
+            {inEnglish ? "Home" : "Start"}
           </button>
         </Link>
         <Link className={`${styles.stickyLink_Booking}`} href="/booking">
