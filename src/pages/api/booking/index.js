@@ -33,6 +33,6 @@ export default async function handler(request, response) {
       response.status(500).json({ message: "email could not be sent" });
     }
   } else {
-    response.status(500).end(); //method not allowed
+    response.status(500).end();
   }
 }

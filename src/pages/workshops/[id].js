@@ -48,7 +48,7 @@ export default function WorkshopDetailsPage({
       </div>
       {workshop.images.map((image) => {
         return (
-          <Fragment key={image.id}>
+          <Fragment key={image._id}>
             <div className={`${styles.imagebox} ${styles.overlappingImage1}`}>
               <Image
                 src={image.url}

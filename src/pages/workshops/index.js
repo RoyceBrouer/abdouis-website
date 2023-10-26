@@ -19,11 +19,10 @@ export default function WorkshopPage({ inEnglish }) {
   if (!workshops) {
     return <h4>sorry, page cannot be loaded</h4>;
   }
-  console.log("workshops", workshops);
 
   return (
     <>
-      <main className={`${styles.main} ${styles.frame}`}>
+      <main className={`${styles.main}`}>
         <Link className={`${styles.stickyLink_Home}`} href="/">
           <button className={`${styles.navButton} ${styles.homeButton}`}>
             {inEnglish ? "Home" : "Start"}

@@ -13,7 +13,7 @@ export default function MediaPage({ inEnglish }) {
   if (!images) {
     return <h4>sorry, page cannot be loaded</h4>;
   }
-  console.log("where are the images", images);
+
   const instaIcon = images.find(
     (image) => image.filename === "instagram_idrgtl"
   );

@@ -33,10 +33,18 @@ export default function BookingPage({ inEnglish }) {
     });
 
     if (response.ok) {
-      alert("Your Email has been sent");
+      alert(
+        inEnglish
+          ? "Your Email has been sent"
+          : "Ihre Nachricht wurde erfolgreich versendet!"
+      );
       router.push("/");
     } else {
-      alert("Something has gone wrong. Please try again.");
+      alert(
+        inEnglish
+          ? "Something has gone wrong. Please try again or send me an Email."
+          : "Da ist leider etwas schiefgegangen. Bitte versuche es erneut oder schreibe an meine Emailadresse s.o."
+      );
     }
   }
   return (
