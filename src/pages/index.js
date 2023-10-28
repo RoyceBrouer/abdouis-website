@@ -8,7 +8,6 @@ import { useState } from "react";
 import { useEffect } from "react";
 import Quote from "@/components/Quote";
 import ToggleLanguageButton from "@/components/Buttons/ToggleLanguageButton";
-import Footer from "@/components/Footer";
 
 export default function Home({ inEnglish, handleToggleLanguage }) {
   const { data: images, isLoading } = useSWR("/api/homeimages");

@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Form from "@/components/Form/Form";
+import BookingForm from "@/components/BookingForm";
 import { useRouter } from "next/router";
 import styles from "./Booking.module.css";
 import useSWR from "swr";
@@ -63,7 +63,7 @@ export default function BookingPage({ inEnglish }) {
             : `${textPartAfterEmailLink.deutsch}`}
         </h4>
       </div>
-      <Form inEnglish={inEnglish} onSubmit={handleBookingRequest} />
+      <BookingForm inEnglish={inEnglish} onSubmit={handleBookingRequest} />
     </main>
   );
 }

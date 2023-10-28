@@ -6,15 +6,20 @@ import Image from "next/image";
 import useSWR from "swr";
 import styles from "./WorkshopDetailsPage.module.css";
 import ToggleLanguageButton from "@/components/Buttons/ToggleLanguageButton";
+import { useSession } from "next-auth/react";
+import ChangeWorkshopButton from "@/components/ChangeWorkshopButton";
 
 export default function WorkshopDetailsPage({
   inEnglish,
   handleToggleLanguage,
 }) {
+  const { data: session } = useSession();
   const router = useRouter();
   const { isReady } = router;
   const { id } = router.query;
   const { data: workshop, isLoading, error } = useSWR(`/api/workshops/${id}`);
+
+  console.log("session", session);
 
   if (!isReady || !workshop || isLoading || error) return <h2>Loading...</h2>;
 
@@ -67,6 +72,11 @@ export default function WorkshopDetailsPage({
         <p className={`${styles.workshopText}`}>
           {inEnglish ? workshop.textEnglish : workshop.textGerman}
         </p>
+        {session && (
+          <Link href="/changeworkshop">
+            <ChangeWorkshopButton />
+          </Link>
+        )}
       </div>
     </main>
   );

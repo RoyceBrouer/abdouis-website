@@ -8,6 +8,7 @@ import Quote from "@/components/Quote";
 import useSWR from "swr";
 import styles from "./WorshopPage.module.css";
 import Footer from "@/components/Footer";
+import { useSession, signIn, signOut } from "next-auth/react";
 
 export default function WorkshopPage({ inEnglish }) {
   const router = useRouter();
