@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Form.module.css";
+import styles from "./BookingForm.module.css";
 
 export default function Form({ onSubmit, inEnglish }) {
   async function handleSubmit(event) {
