@@ -20,6 +20,7 @@ export default function WorkshopDetailsPage({
   const { data: workshop, isLoading, error } = useSWR(`/api/workshops/${id}`);
 
   console.log("session", session);
+  console.log("workshop", workshop);
 
   if (!isReady || !workshop || isLoading || error) return <h2>Loading...</h2>;
 
@@ -54,11 +55,11 @@ export default function WorkshopDetailsPage({
       {workshop.images.map((image) => {
         return (
           <Fragment key={image._id}>
-            <div className={`${styles.imagebox} ${styles.overlappingImage1}`}>
+            <div className={`${styles.imagebox}`}>
               <Image
                 src={image.url}
                 alt="Picture"
-                className={`${styles.homeImage}`}
+                className={`${styles.image}`}
                 fill={true}
               />
             </div>
@@ -73,7 +74,7 @@ export default function WorkshopDetailsPage({
           {inEnglish ? workshop.textEnglish : workshop.textGerman}
         </p>
         {session && (
-          <Link href="/changeworkshop">
+          <Link href={`/changeworkshop/${id}`}>
             <ChangeWorkshopButton />
           </Link>
         )}

@@ -26,7 +26,7 @@
   margin-left: 20vw;
 }
 
-.homeImage {
+.image {
   object-fit: contain;
   padding: 1rem;
   /* animation: fadeOut 4s infinite; */
