@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 // import { useSession, signIn, signOut } from "next-auth/react";
 import { useState } from "react";
 import { signIn, signOut, useSession } from "next-auth/react";
+import styles from "./loginPage.module.css";
 
 export default function AdminLoginPage() {
   const router = useRouter();
@@ -56,6 +57,14 @@ export default function AdminLoginPage() {
       </div>
     );
   } else {
-    return <button type="button" onClick={() => signOut()}></button>;
+    return (
+      <button
+        type="button"
+        onClick={() => signOut()}
+        className={`${styles.signOutButton}`}
+      >
+        Signout
+      </button>
+    );
   }
 }

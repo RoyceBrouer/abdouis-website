@@ -14,6 +14,15 @@ export default function ChangeWorkshopPage() {
   const { data: workshop, isLoading, error } = useSWR(`/api/workshops/${id}`);
 
   const handleChangeImage = async (id) => {
+    formData.append("upload_preset", "hc6mref0");
+
+    const data = await fetch(
+      "https://api.cloudinary.com/v1_1/dkrguoage/image/upload",
+      {
+        method: "POST",
+        body: formData,
+      }
+    ).then((r) => r.json());
     const response = await fetch(`/api/changeworkshopimage/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
