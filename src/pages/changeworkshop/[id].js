@@ -13,29 +13,33 @@ export default function ChangeWorkshopPage() {
   const { id } = router.query;
   const { data: workshop, isLoading, error } = useSWR(`/api/workshops/${id}`);
 
-  const handleDeleteImage = async (id) => {
+  const handleChangeImage = async (id) => {
     const response = await fetch(`/api/changeworkshopimage/${id}`, {
-      method: "DELETE",
+      method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(id),
     });
   };
 
-  const handleChangeWorkshopText = async (text) => {
-    const response = await fetch(`/api//${id}`, {
-      method: "PATCH",
+  const handleChangeWorkshop = async (workshop) => {
+    const response = await fetch(`/api/workshops/${id}`, {
+      method: "PUT",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(id),
+      body: JSON.stringify(workshop),
     });
+    if (!response.ok) {
+      console.error(response.status);
+      return;
+    }
+    router.push(`/workshops/${id}`);
   };
-  // const handleChangeWorkshopText = async (text) => {};
 
   if (!isReady || !workshop || isLoading || error) return <h2>Loading...</h2>;
   if (!session) {
     return <h2> sorry you do not have authorization for this admin page </h2>;
   } else {
     return (
-      <form key={id}>
+      <form key={id} onSubmit={handleChangeWorkshop}>
         {workshop.images.map((image) => {
           return (
             <Fragment key={image._id}>
@@ -47,8 +51,8 @@ export default function ChangeWorkshopPage() {
                   fill={true}
                 />
               </div>
-              <button type="button" onClick={handleDeleteImage}>
-                Delete Image
+              <button type="button" onClick={handleReplaceImage}>
+                Replace Image
               </button>
             </Fragment>
           );

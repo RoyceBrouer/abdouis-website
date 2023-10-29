@@ -40,6 +40,9 @@ export default function WorkshopPage({ inEnglish }) {
           </button>
         </Link>
         {workshops.map((workshop) => {
+          {
+            console.log("workshop._id", workshop._id);
+          }
           return (
             <div key={workshop._id} className={`${styles.workshopContainer}`}>
               <Link href={`/workshops/${workshop._id}`}>
