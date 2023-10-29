@@ -19,6 +19,8 @@ export default function WorkshopDetailsPage({
   const { id } = router.query;
   const { data: workshop, isLoading, error } = useSWR(`/api/workshops/${id}`);
 
+  console.log("id from router query", id);
+
   console.log("session", session);
   console.log("workshop", workshop);
 

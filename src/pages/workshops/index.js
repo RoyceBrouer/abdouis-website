@@ -45,7 +45,7 @@ export default function WorkshopPage({ inEnglish }) {
           }
           return (
             <div key={workshop._id} className={`${styles.workshopContainer}`}>
-              <Link href={`/${workshop._id}`}>
+              <Link href={`/workshops/${workshop._id}`}>
                 {workshop.images.map((image) => {
                   return (
                     <Fragment key={image._id}>
