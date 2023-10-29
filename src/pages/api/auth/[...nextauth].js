@@ -24,6 +24,7 @@ export const authOptions = {
   ],
   session: {
     jwt: true, //enabling JSON Web Tokens
+    strategy: "jwt",
     secret: process.env.AUTH_SECRET,
     maxAge: 2 * 60 * 60, //in seconds (2 hours)
     updateAge: 30 * 60, //in seconds (30 minutes)
