@@ -6,7 +6,7 @@ export default async function handler(request, response) {
   await dbConnect();
   const { id } = request.query;
   console.log("REQUEST QUERY", request.query);
-  console.log("id from reuquest query", id);
+  console.log("id from request query", id);
   if (!id) {
     return;
   }
