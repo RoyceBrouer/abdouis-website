@@ -78,7 +78,7 @@ export default function WorkshopDetailsPage({
           {inEnglish ? workshop.textEnglish : workshop.textGerman}
         </p>
         {session && (
-          <Link href={`/changeworkshop/${id}`}>
+          <Link href={`/changeworkshop/${query.id}`}>
             <ChangeWorkshopButton />
           </Link>
         )}

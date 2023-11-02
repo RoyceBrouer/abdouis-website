@@ -1,0 +1,61 @@
+.main {
+  /* display: grid;
+    grid-template-areas:
+      "nav open open open togglebutton open"
+      "nav image image image title open"
+      "nav image image image text text"
+      "nav image image image text text"
+      "open image image image text text"
+      "open open open open open open"; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-around;
+  min-height: 100vh;
+  min-width: 100vw;
+  background: linear-gradient(270deg, var(--lightgold), var(--darkgold), pink);
+  position: relative;
+  margin-bottom: 0;
+}
+
+.imagebox {
+  /* grid-area: image; */
+  height: 50vh;
+  width: 70vw;
+  position: relative;
+  margin-left: 20vw;
+}
+
+.image {
+  object-fit: contain;
+  padding: 1rem;
+  /* animation: fadeOut 4s infinite; */
+}
+
+.navbox {
+  grid-area: nav;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 2vw;
+  top: 10vh;
+  z-index: 1;
+  /* display: block; */
+}
+
+.navLink {
+  color: rgb(254, 238, 238);
+}
+
+.workshopTitle {
+  grid-area: title;
+  margin-bottom: 3%;
+}
+
+.workshopText {
+  grid-area: text;
+}
+
+.textbox {
+  margin: 5%;
+}
