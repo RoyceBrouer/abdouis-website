@@ -14,17 +14,19 @@ export default function WorkshopDetailsPage({
   handleToggleLanguage,
 }) {
   const { data: session } = useSession();
-  const router = useRouter();
-  const { isReady } = router;
-  const { id } = router.query;
-  const { data: workshop, isLoading, error } = useSWR(`/api/workshops/${id}`);
+  const { query } = useRouter();
+  const {
+    data: workshop,
+    isLoading,
+    error,
+  } = useSWR(query.id ? `/api/workshops/${query.id}` : null);
 
-  console.log("id from router query", id);
+  console.log("id from router query", query.id);
 
   console.log("session", session);
   console.log("workshop", workshop);
 
-  if (!isReady || !workshop || isLoading || error) return <h2>Loading...</h2>;
+  if (!workshop || isLoading || error) return <h2>Loading...</h2>;
 
   return (
     <main className={`${styles.main}`}>

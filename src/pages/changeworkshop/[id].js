@@ -13,22 +13,22 @@ export default function ChangeWorkshopPage() {
   const { id } = router.query;
   const { data: workshop, isLoading, error } = useSWR(`/api/workshops/${id}`);
 
-  const handleChangeImage = async (id) => {
-    formData.append("upload_preset", "hc6mref0");
+  // const handleChangeImage = async (id) => {
+  //   formData.append("upload_preset", "hc6mref0");
 
-    const data = await fetch(
-      "https://api.cloudinary.com/v1_1/dkrguoage/image/upload",
-      {
-        method: "POST",
-        body: formData,
-      }
-    ).then((r) => r.json());
-    const response = await fetch(`/api/changeworkshopimage/${id}`, {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(id),
-    });
-  };
+  //   const data = await fetch(
+  //     "https://api.cloudinary.com/v1_1/dkrguoage/image/upload",
+  //     {
+  //       method: "POST",
+  //       body: formData,
+  //     }
+  //   ).then((r) => r.json());
+  //   const response = await fetch(`/api/changeworkshopimage/${id}`, {
+  //     method: "PUT",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify(id),
+  //   });
+  // };
 
   const handleChangeWorkshop = async (workshop) => {
     const response = await fetch(`/api/workshops/${id}`, {
