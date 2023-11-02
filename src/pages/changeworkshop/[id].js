@@ -8,7 +8,7 @@ import Image from "next/image";
 import styles from "./ChangeWorkshopPage.module.css";
 import { useState } from "react";
 
-export default function ChangeWorkshopPage() {
+export default function ChangeWorkshopPage({ inEnglish }) {
   const { data: session } = useSession();
   const router = useRouter();
   const { isReady } = router;
