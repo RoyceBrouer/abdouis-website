@@ -23,7 +23,7 @@ export default function ChangeWorkshopPage({ inEnglish }) {
    * Triggers when the file input changes (ex: when a file is selected)
    */
 
-  function handleOnChange(changeEvent) {
+  function handleChangeImageOnChange(changeEvent) {
     const reader = new FileReader();
 
     reader.onload = function (onLoadEvent) {
@@ -37,7 +37,7 @@ export default function ChangeWorkshopPage({ inEnglish }) {
   /* handleOnSubmit Triggers when the main form is submitted
    */
 
-  async function handleOnSubmit(event) {
+  async function handleChangeImageOnSubmit(event) {
     event.preventDefault();
 
     const form = event.currentTarget;
@@ -51,10 +51,12 @@ export default function ChangeWorkshopPage({ inEnglish }) {
       formData.append("file", file);
     }
 
-    formData.append("upload_preset", "your preset name");
+    formData.append("upload_preset", "hc6mref0");
+    //maybe append more here?
+    console.log("FORMDATA", formData);
 
     const data = await fetch(
-      "https://api.cloudinary.com/v1_1/<your cloud name>/image/upload",
+      "https://api.cloudinary.com/v1_1/dkrguoage/image/upload",
       {
         method: "POST",
         body: formData,
@@ -63,6 +65,13 @@ export default function ChangeWorkshopPage({ inEnglish }) {
 
     setImageSrc(data.secure_url);
     setUploadData(data);
+
+    //below id is referring to the router query so to the workshop id, not yet workshop.images[0]._id
+    const response = await fetch(`/api/changeworkshopimage/${id}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(id),
+    });
   }
 
   // const handleChangeImage = async (id) => {
@@ -115,8 +124,8 @@ export default function ChangeWorkshopPage({ inEnglish }) {
               <form
                 className={styles.form}
                 method="post"
-                onChange={handleOnChange}
-                onSubmit={handleOnSubmit}
+                onChange={handleChangeImageOnChange}
+                onSubmit={handleChangeImageOnSubmit}
               >
                 <p>
                   <input type="file" name="file" />
@@ -137,13 +146,18 @@ export default function ChangeWorkshopPage({ inEnglish }) {
         })}
         <form key={id} onSubmit={handleChangeWorkshop}>
           <div className={`${styles.textbox}`}>
-            <h3 className={`${styles.workshopTitle}`}>
-              {inEnglish ? workshop.titleEnglish : workshop.titleGerman}
-            </h3>
-            <p className={`${styles.workshopText}`}>
-              {inEnglish ? workshop.textEnglish : workshop.textGerman}
-            </p>
-            ;
+            <input
+              type="text"
+              name="titleEnglish"
+              defaultValue={workshop.titleEnglish}
+            />
+            <input
+              type="text"
+              name="titleGerman"
+              defaultValue={workshop.titleGerman}
+            />
+            <textarea name="textEnglish" defaultValue={workshop.textEnglish} />
+            <textarea name="textGerman" defaultValue={workshop.textGerman} />
           </div>
         </form>
       </main>
