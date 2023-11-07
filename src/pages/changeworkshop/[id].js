@@ -70,7 +70,7 @@ export default function ChangeWorkshopPage({ inEnglish }) {
     const response = await fetch(`/api/changeworkshopimage/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(id),
+      body: JSON.stringify(imageSrc), //is this correct?
     });
   }
 
@@ -91,22 +91,22 @@ export default function ChangeWorkshopPage({ inEnglish }) {
   //   });
   // };
 
-  const handleChangeWorkshop = async (workshop) => {
+  const handleChangeWorkshop = async (event, workshop) => {
     event.preventDefault();
 
     try {
-    const response = await fetch(`/api/workshops/${id}`, {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(workshop),
-    });
-    if (!response.ok) {
-      console.error(response.status);
-    } }catch (error) {
+      const response = await fetch(`/api/workshops/${id}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(workshop),
+      });
+      if (!response.ok) {
+        console.error(response.status);
+      }
+    } catch (error) {
       console.error(error);
     }
-      return;
-    }
+
     router.push(`/workshops/${id}`);
   };
 
@@ -162,10 +162,18 @@ export default function ChangeWorkshopPage({ inEnglish }) {
               name="titleGerman"
               defaultValue={workshop.titleGerman}
             />
-            <textarea name="textEnglish" defaultValue={workshop.textEnglish} rows="20"
-              cols="auto"/>
-            <textarea name="textGerman" defaultValue={workshop.textGerman} rows="20"
-              cols="auto"/>
+            <textarea
+              name="textEnglish"
+              defaultValue={workshop.textEnglish}
+              rows="20"
+              cols="auto"
+            />
+            <textarea
+              name="textGerman"
+              defaultValue={workshop.textGerman}
+              rows="20"
+              cols="auto"
+            />
           </div>
         </form>
       </main>
