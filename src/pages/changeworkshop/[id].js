@@ -175,6 +175,7 @@ export default function ChangeWorkshopPage({ inEnglish }) {
               cols="auto"
             />
           </div>
+          <button>Submit Changes</button>
         </form>
       </main>
     );
