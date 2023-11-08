@@ -28,16 +28,21 @@ export default function MediaPage({ inEnglish }) {
         <Link href="https.instagram.com" className={`${styles.instaLink}`}>
           <Image alt="Instagram" src={instaIcon.url} width="100" height="100" />
         </Link>
-        <Link href="https.spotify.com" className={`${styles.spotifyLink}`}>
-          <Image
-            alt="Instagram"
-            src={spotifyIcon.url}
-            width="100"
-            height="100"
-          />
+        <Link
+          href="https://spotify.link/6Z2ZhNcgdEb"
+          className={`${styles.spotifyLink}`}
+        >
+          <Image alt="Spotify" src={spotifyIcon.url} width="100" height="100" />
+          Black Lives Matter mit Jamila Hassan
+        </Link>
+        <Link
+          href="https://spotify.link/msQIK4jgdEb"
+          className={`${styles.spotifyLink}`}
+        >
+          <Image alt="Spotify" src={spotifyIcon.url} width="100" height="100" />
+          PISSY Podcast Klimagerechtigkeit
         </Link>
       </div>
-      ;
     </main>
   );
 }
