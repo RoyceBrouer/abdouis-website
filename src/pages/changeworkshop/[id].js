@@ -17,7 +17,7 @@ export default function ChangeWorkshopPage({ inEnglish }) {
 
   const [imageSrc, setImageSrc] = useState();
   const [uploadData, setUploadData] = useState();
-  // const [workshopData, setWorkshopData] = useState();
+  const [workshopData, setWorkshopData] = useState();
 
   /**
    * handleOnChange
