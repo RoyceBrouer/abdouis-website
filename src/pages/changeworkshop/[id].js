@@ -183,7 +183,7 @@ export default function ChangeWorkshopPage({ inEnglish }) {
               cols="auto"
             />
           </div>
-          <button>Submit Changes</button>
+          <button className={`${styles.submitButton}`}>Submit Changes</button>
         </form>
       </main>
     );
