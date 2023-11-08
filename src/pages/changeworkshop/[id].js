@@ -74,23 +74,6 @@ export default function ChangeWorkshopPage({ inEnglish }) {
     });
   }
 
-  // const handleChangeImage = async (id) => {
-  //   formData.append("upload_preset", "hc6mref0");
-
-  //   const data = await fetch(
-  //     "https://api.cloudinary.com/v1_1/dkrguoage/image/upload",
-  //     {
-  //       method: "POST",
-  //       body: formData,
-  //     }
-  //   ).then((r) => r.json());
-  //   const response = await fetch(`/api/changeworkshopimage/${id}`, {
-  //     method: "PUT",
-  //     headers: { "Content-Type": "application/json" },
-  //     body: JSON.stringify(id),
-  //   });
-  // };
-
   const handleChangeWorkshop = async (event) => {
     event.preventDefault();
 
@@ -100,7 +83,7 @@ export default function ChangeWorkshopPage({ inEnglish }) {
 
     try {
       const response = await fetch(`/api/workshops/${id}`, {
-        method: "PUT",
+        method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(workshopData),
       });
@@ -154,7 +137,7 @@ export default function ChangeWorkshopPage({ inEnglish }) {
             </Fragment>
           );
         })}
-        <form key={id} onSubmit={handleChangeWorkshop}>
+        <form onSubmit={handleChangeWorkshop}>
           <div className={`${styles.textbox}`}>
             <label id="titleEnglish">Title English</label>
             <input
