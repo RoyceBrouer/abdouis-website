@@ -25,7 +25,10 @@ export default function MediaPage({ inEnglish }) {
     <main className={`${styles.main}`}>
       <BackButton inEnglish={inEnglish} />
       <div className={`${styles.iconContainer}`}>
-        <Link href="https.instagram.com" className={`${styles.instaLink}`}>
+        <Link
+          href="https://www.instagram.com/nubianpower030/#"
+          className={`${styles.instaLink}`}
+        >
           <Image alt="Instagram" src={instaIcon.url} width="100" height="100" />
         </Link>
         <Link
