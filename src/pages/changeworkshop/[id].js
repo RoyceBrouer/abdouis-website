@@ -152,24 +152,32 @@ export default function ChangeWorkshopPage({ inEnglish }) {
         })}
         <form key={id} onSubmit={handleChangeWorkshop}>
           <div className={`${styles.textbox}`}>
+            <label id="titleEnglish">Title English</label>
             <input
               type="text"
               name="titleEnglish"
+              id="titleEnglish"
               defaultValue={workshop.titleEnglish}
             />
+            <label id="titleGerman">Title German</label>
             <input
               type="text"
               name="titleGerman"
+              id="titleGerman"
               defaultValue={workshop.titleGerman}
             />
+            <label id="textEnglish"> Text English</label>
             <textarea
               name="textEnglish"
+              id="textEnglish"
               defaultValue={workshop.textEnglish}
               rows="20"
               cols="auto"
             />
+            <label id="textGerman"> Text German</label>
             <textarea
               name="textGerman"
+              id="textGerman"
               defaultValue={workshop.textGerman}
               rows="20"
               cols="auto"
