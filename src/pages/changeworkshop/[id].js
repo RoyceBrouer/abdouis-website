@@ -67,7 +67,7 @@ export default function ChangeWorkshopPage({ inEnglish }) {
     setImageSrc(data.secure_url);
     setUploadData(data);
 
-    const newImage = {...workshop.images[0], url: imageSrc};//possible?
+    const newImage = { ...workshop.images[0], url: imageSrc }; //possible?
 
     //below id is referring to the router query so to the workshop id, not yet workshop.images[0]._id
     const response = await fetch(`/api/changeworkshopimage/${id}`, {
@@ -83,7 +83,7 @@ export default function ChangeWorkshopPage({ inEnglish }) {
     const formData = new FormData(event.target);
     const workshopModifications = Object.fromEntries(formData);
 
-    setWorkshopData({...workshopModifications, workshop.images});
+    setWorkshopData({ ...workshopModifications, images: workshop.images });
 
     try {
       const response = await fetch(`/api/workshops/${id}`, {
