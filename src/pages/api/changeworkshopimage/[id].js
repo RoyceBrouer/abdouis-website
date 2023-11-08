@@ -13,11 +13,13 @@ export default async function handler(request, response) {
       if (!workshop) {
         return response.status(404).json({ error: "Workshop not found" });
       }
-      const image = await Image.findById(workshop.images[0]._id);
+      const image = await Image.findByIdAndUpdate(workshop.images[0]._id, {
+        $set: request.body,
+      });
 
-      image.url = request.body;
+      //   image.url = request.body;
 
-      await image.save();
+      //   await image.save();
 
       response
         .status(200)

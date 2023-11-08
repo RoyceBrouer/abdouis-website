@@ -17,6 +17,7 @@ export default function ChangeWorkshopPage({ inEnglish }) {
 
   const [imageSrc, setImageSrc] = useState();
   const [uploadData, setUploadData] = useState();
+  // const [workshopData, setWorkshopData] = useState();
 
   /**
    * handleOnChange
@@ -66,11 +67,13 @@ export default function ChangeWorkshopPage({ inEnglish }) {
     setImageSrc(data.secure_url);
     setUploadData(data);
 
+    const newImage = {...workshop.images[0], url: imageSrc};//possible?
+
     //below id is referring to the router query so to the workshop id, not yet workshop.images[0]._id
     const response = await fetch(`/api/changeworkshopimage/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(imageSrc), //is this correct?
+      body: JSON.stringify(newImage), //is this correct?
     });
   }
 
@@ -78,8 +81,9 @@ export default function ChangeWorkshopPage({ inEnglish }) {
     event.preventDefault();
 
     const formData = new FormData(event.target);
-    const workshopData = Object.fromEntries(formData);
-    console.log("request.body will be workshopData:", workshopData);
+    const workshopModifications = Object.fromEntries(formData);
+
+    setWorkshopData({...workshopModifications, workshop.images});
 
     try {
       const response = await fetch(`/api/workshops/${id}`, {
