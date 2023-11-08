@@ -96,6 +96,7 @@ export default function ChangeWorkshopPage({ inEnglish }) {
 
     const formData = new FormData(event.target);
     const workshopData = Object.fromEntries(formData);
+    console.log("request.body will be workshopData:", workshopData);
 
     try {
       const response = await fetch(`/api/workshops/${id}`, {
