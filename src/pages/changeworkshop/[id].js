@@ -91,14 +91,17 @@ export default function ChangeWorkshopPage({ inEnglish }) {
   //   });
   // };
 
-  const handleChangeWorkshop = async (event, workshop) => {
+  const handleChangeWorkshop = async (event) => {
     event.preventDefault();
+
+    const formData = new FormData(event.target);
+    const workshopData = Object.fromEntries(formData);
 
     try {
       const response = await fetch(`/api/workshops/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(workshop),
+        body: JSON.stringify(workshopData),
       });
       if (!response.ok) {
         console.error(response.status);
