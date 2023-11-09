@@ -19,11 +19,6 @@ export default function ChangeWorkshopPage({ inEnglish }) {
   const [uploadData, setUploadData] = useState();
   const [workshopData, setWorkshopData] = useState();
 
-  /**
-   * handleOnChange
-   * Triggers when the file input changes (ex: when a file is selected)
-   */
-
   function handleChangeImageOnChange(changeEvent) {
     const reader = new FileReader();
 
@@ -34,9 +29,6 @@ export default function ChangeWorkshopPage({ inEnglish }) {
 
     reader.readAsDataURL(changeEvent.target.files[0]);
   }
-
-  /* handleOnSubmit Triggers when the main form is submitted
-   */
 
   async function handleChangeImageOnSubmit(event) {
     event.preventDefault();
@@ -67,7 +59,7 @@ export default function ChangeWorkshopPage({ inEnglish }) {
     setImageSrc(data.secure_url);
     setUploadData(data);
 
-    const newImage = { ...workshop.images[0], url: imageSrc }; //possible?
+    const newImage = { ...workshop.images[0], url: imageSrc }; //supposed to create data for one new image document within images that holds the _Id of the first image of that workshop
 
     //below id is referring to the router query so to the workshop id, not yet workshop.images[0]._id
     const response = await fetch(`/api/changeworkshopimage/${id}`, {

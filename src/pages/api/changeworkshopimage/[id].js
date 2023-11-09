@@ -17,10 +17,6 @@ export default async function handler(request, response) {
         $set: request.body,
       });
 
-      //   image.url = request.body;
-
-      //   await image.save();
-
       response
         .status(200)
         .json({ message: "Workshop image updated successfully" });
