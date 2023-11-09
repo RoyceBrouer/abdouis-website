@@ -23,7 +23,7 @@ export default function Form({ onSubmit, inEnglish }) {
             <input
               id="firstName"
               name="firstName"
-              placeholder="First Name"
+              placeholder={inEnglish ? "First Name" : "Vorname"}
               type="text"
               required
             />
@@ -34,7 +34,7 @@ export default function Form({ onSubmit, inEnglish }) {
             <input
               id="lastName"
               name="lastName"
-              placeholder="Last Name"
+              placeholder={inEnglish ? "Last Name" : "Nachname"}
               type="text"
               required
             />
@@ -43,7 +43,9 @@ export default function Form({ onSubmit, inEnglish }) {
             <input
               id="email"
               name="email"
-              placeholder="Your Email-Adress"
+              placeholder={
+                inEnglish ? "Your Email-Adress" : "Ihre Email-Adresse"
+              }
               type="text"
               required
             />
@@ -56,7 +58,9 @@ export default function Form({ onSubmit, inEnglish }) {
             <textarea
               id="message"
               name="message"
-              placeholder="Your Message for me"
+              placeholder={
+                inEnglish ? "Your Message for Me" : "Ihre Nachricht an mich"
+              }
               rows="20"
               cols="auto"
               required
