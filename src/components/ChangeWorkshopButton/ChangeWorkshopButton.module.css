@@ -1,4 +1,4 @@
 .change_workshop_button {
-  width: 10vw;
+  min-width: 10vw;
   height: 10vh;
 }
