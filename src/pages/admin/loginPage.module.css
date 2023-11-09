@@ -8,11 +8,13 @@
   background: linear-gradient(270deg, var(--lightgold), var(--darkgold), pink);
 }
 
-.iconContainer {
+.loginForm {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  padding: 1rem;
+  height: 30vh;
 }
 
 .signOutButton {

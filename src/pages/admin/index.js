@@ -33,9 +33,9 @@ export default function AdminLoginPage() {
     return (
       <main className={`${styles.main}`}>
         <h2>Login</h2>
-        <form onSubmit={handleLogin}>
+        <form className={`${styles.loginForm}`} onSubmit={handleLogin}>
           <div>
-            <label htmlFor="username">Username:</label>
+            <label htmlFor="username">Username: </label>
             <input
               type="text"
               id="username"
@@ -44,7 +44,7 @@ export default function AdminLoginPage() {
             />
           </div>
           <div>
-            <label htmlFor="password">Password:</label>
+            <label htmlFor="password">Password: </label>
             <input
               type="password"
               id="password"
