@@ -5,6 +5,7 @@ import { SWRConfig } from "swr";
 import Layout from "@/components/Layout";
 import useLocalStorageState from "use-local-storage-state";
 import { SessionProvider } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 export const fetcher = (...args) => fetch(...args).then((res) => res.json());
 

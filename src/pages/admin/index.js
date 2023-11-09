@@ -31,7 +31,7 @@ export default function AdminLoginPage() {
 
   if (!session) {
     return (
-      <div>
+      <main className={`${styles.main}`}>
         <h2>Login</h2>
         <form onSubmit={handleLogin}>
           <div>
@@ -54,17 +54,19 @@ export default function AdminLoginPage() {
           </div>
           <button type="submit">Login</button>
         </form>
-      </div>
+      </main>
     );
   } else {
     return (
-      <button
-        type="button"
-        onClick={() => signOut()}
-        className={`${styles.signOutButton}`}
-      >
-        Signout
-      </button>
+      <main className={`${styles.main}`}>
+        <button
+          type="button"
+          onClick={() => signOut()}
+          className={`${styles.signOutButton}`}
+        >
+          Signout
+        </button>
+      </main>
     );
   }
 }

@@ -36,15 +36,15 @@ export default function MediaPage({ inEnglish }) {
           className={`${styles.spotifyLink}`}
         >
           <Image alt="Spotify" src={spotifyIcon.url} width="100" height="100" />
-          Black Lives Matter mit Jamila Hassan
+          {/* Black Lives Matter mit Jamila Hassan */}
         </Link>
         <Link
           href="https://spotify.link/msQIK4jgdEb"
           className={`${styles.spotifyLink}`}
         >
-          <Image alt="Spotify" src={spotifyIcon.url} width="100" height="100" />
+          {/* <Image alt="Spotify" src={spotifyIcon.url} width="100" height="100" />
           PISSY Podcast Klimagerechtigkeit
-        </Link>
+        </Link> */}
       </div>
     </main>
   );
