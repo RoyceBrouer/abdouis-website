@@ -9,9 +9,9 @@ export default function Impressum({ inEnglish }) {
       <h4>Impressum</h4>
       <p>Abdoui Mohamed</p>
       <p>booking-abdoui-ws@riseup.net</p>
-      <p>Website</p>
-      <p>Royce Brouër</p>
-      <p>tipmehere@riseup.net</p>
+      <p className={`${styles.impressumForWebsite}`}>Website</p>
+      <p className={`${styles.impressumForWebsite}`}>Royce Brouër</p>
+      <p className={`${styles.impressumForWebsite}`}>tipmehere@riseup.net</p>
     </main>
   );
 }

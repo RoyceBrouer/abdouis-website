@@ -7,3 +7,7 @@
   min-width: 100vw;
   background: linear-gradient(270deg, var(--lightgold), var(--darkgold), pink);
 }
+
+.impressumForWebsite {
+  font-size: 0.2rem;
+}

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
-import Button from "@/components/Buttons";
+// import Button from "@/components/Buttons";
 import HomepageHeader from "@/components/HomepageHeader/";
 import useSWR from "swr";
 import { useState } from "react";
